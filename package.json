@@ -1,0 +1,21 @@
+{
+  "name": "token-burn-verifier",
+  "version": "1.0.0",
+  "description": "Executable multi-chain token burn verification toolkit, exact protocol math simulators, Solidity reference contracts, and anti-theater credibility auditor covering ETH EIP-1559, AVAX C-Chain, XRPL, BNB Auto-Burn/BEP-95, and Helium BME Data Credits.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "verify:eth": "node scripts/verify-eth-eip1559-burn.mjs",
+    "verify:erc20": "node scripts/verify-erc20-burn.mjs",
+    "verify:live": "node scripts/verify-all-5-chains.mjs",
+    "compile:contracts": "node scripts/compile-contracts.mjs",
+    "demo": "node scripts/run-all-demos.mjs"
+  },
+  "dependencies": {
+    "ethers": "^6.13.5"
+  },
+  "devDependencies": {
+    "solc": "^0.8.28"
+  }
+}

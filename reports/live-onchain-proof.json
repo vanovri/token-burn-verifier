@@ -1,0 +1,834 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAtIso": "2026-11-22T03:01:54.177Z",
+  "articleReference": "5 Token Burns That Aren't Just a Show (Thinking Loop)",
+  "liveOnChainProofs": {
+    "ethereumEip1559": {
+      "chain": "Ethereum Mainnet",
+      "mechanism": "EIP-1559 Base Fee Burn",
+      "blockNumber": 26467821,
+      "blockHash": "0xae49b80afd51b79cca8815e2fc192c6fb81287262a407648dcf56161228db533",
+      "blockTimestampIso": "2026-11-22T02:59:47.000Z",
+      "txHash": "0x61d05952776c8d16f6b1eaff442a0bd436e6d7075b4d5d9095feffb5436d73c3",
+      "txType": 2,
+      "gasUsed": "51688",
+      "baseFeePerGasWei": "204105090",
+      "baseFeeGwei": "0.20410509",
+      "effectiveGasPriceGwei": "1.204110454",
+      "txBurnedWei": "10549783891920",
+      "txBurnedEth": "0.00001054978389192",
+      "txPriorityTipEth": "0.000051688277254432",
+      "txBurnSharePercent": 16.95,
+      "blockGasUsed": "42852517",
+      "blockGasLimit": "60000000",
+      "blockUtilizationPercent": 71.42,
+      "blockTotalBurnedWei": "8746416839011530",
+      "blockTotalBurnedEth": "0.008746",
+      "sanityCheck": {
+        "whereDidTokensGo": "PROTOCOL_DESTRUCTION (base fee destroyed in EVM state transition)",
+        "supplyActuallyChanged": true
+      },
+      "rpcUrl": "https://ethereum-rpc.publicnode.com",
+      "verifiedAtIso": "2026-11-22T03:01:53.055Z"
+    },
+    "avalancheCChain": {
+      "chain": "Avalanche C-Chain Mainnet",
+      "mechanism": "100% Protocol Fee Burn ('fees go to nobody')",
+      "blockNumber": 101032094,
+      "blockHash": "0xbf2ce8cf97938da38139ccc5c4b517e920696272f8ef02217bce4c75169f49f2",
+      "blockTimestampIso": "2026-11-22T02:59:57.000Z",
+      "blockCoinbaseMiner": "0x0100000000000000000000000000000000000000",
+      "coinbaseIsProtocolBlackhole": true,
+      "txCountInBlock": 1,
+      "sampleTxHash": "0xc43a969249d742f7c2503b05e1bbbe0d5b2c1bbadc252b00d280aeba6d7b5e5b",
+      "sampleTxGasUsed": "34502",
+      "effectiveGasPriceNAvax": "11.250000225",
+      "sampleTxBurnedAvax": "0.00038814750776295",
+      "validatorFeePayoutAvax": "0.0",
+      "blockGasUsed": "65000",
+      "blockFloorBurnedAvax": "0.00048750",
+      "sanityCheck": {
+        "whereDidTokensGo": "PROTOCOL_DESTRUCTION (C-Chain coinbase 0x0100000000000000000000000000000000000000; 0% to validators)",
+        "supplyActuallyChanged": true
+      },
+      "rpcUrl": "https://api.avax.network/ext/bc/C/rpc",
+      "verifiedAtIso": "2026-11-22T03:01:52.772Z"
+    },
+    "xrplLedger": {
+      "chain": "XRP Ledger Mainnet",
+      "mechanism": "Anti-Spam Transaction Cost Destruction",
+      "ledgerIndex": 108488304,
+      "ledgerHash": "A110BBCA40C3E4BD1F4BE0DB42A3B844A8F0B4C9A8F3A76F5679D730A451F24A",
+      "closeTimeIso": "2026-11-22T02:59:51.000Z",
+      "genesisSupplyXrp": "100000000000.000000",
+      "remainingSupplyXrp": "99985539170.722401",
+      "cumulativeBurnedXrp": "14460829.277599",
+      "cumulativeBurnedDrops": "14460829277599",
+      "percentSupplyDestroyed": 0.0144,
+      "validatedLedgerTxCount": 110,
+      "validatedLedgerBurnedDrops": "64947",
+      "validatedLedgerBurnedXrp": "0.064947",
+      "minTxFeeDrops": "10",
+      "maxTxFeeDrops": "26158",
+      "validatorFeePayoutXrp": "0.000000",
+      "sanityCheck": {
+        "whereDidTokensGo": "PROTOCOL_DESTRUCTION (deducted from sender & removed from total_coins)",
+        "supplyActuallyChanged": true
+      },
+      "rpcUrl": "https://xrplcluster.com",
+      "verifiedAtIso": "2026-11-22T03:01:53.505Z"
+    },
+    "bnbChain": {
+      "chain": "BNB Smart Chain Mainnet",
+      "mechanism": "Quarterly Auto-Burn (Formula) + BEP-95 Real-Time Gas Burn",
+      "blockNumber": 135003340,
+      "blockHash": "0x1d12fd2ea6ba4a112ef1e9de5cee399eb754e65dac1f21b198466bafdca8aaba",
+      "blockTimestampIso": "2026-11-22T03:00:00.000Z",
+      "burnDeadAddress": "0x000000000000000000000000000000000000dEaD",
+      "deadAddressBalanceWei": "18147992611553573372049950",
+      "deadAddressBalanceBnb": "18147992.61155357337204995",
+      "liveBlockGasUsed": "19199149",
+      "liveGasPriceGwei": "0.05",
+      "estimatedBep95BlockBurnBnb": "0.000095995",
+      "bep95BurnRatioPercent": 10,
+      "autoBurnFormulaCheck": {
+        "formula": "B = N * 1000 / (P + K)",
+        "inputs": {
+          "blocksProducedN": 2592000,
+          "avgPriceUsdP": 600,
+          "priceAnchorK": 1000,
+          "currentSupplyBnb": 144000000,
+          "supplyFloorBnb": 100000000
+        },
+        "rawFormulaBurnBnb": "1620000.0000",
+        "actualBurnBnb": "1620000.0000",
+        "postBurnSupplyBnb": "142380000.0000",
+        "floorReached": false,
+        "estimatedUsdValue": 972000000
+      },
+      "sanityCheck": {
+        "whereDidTokensGo": "0x000000000000000000000000000000000000dEaD (irrecoverable burn sink + BEP-95 system burn)",
+        "supplyActuallyChanged": true
+      },
+      "rpcUrl": "https://bsc-rpc.publicnode.com",
+      "verifiedAtIso": "2026-11-22T03:01:52.843Z"
+    },
+    "heliumSolana": {
+      "chain": "Solana Mainnet (Helium Protocol)",
+      "mechanism": "Burn-to-Mint Data Credits (Non-Transferable Utility)",
+      "solanaSlot": 472382246,
+      "hntMintAddress": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
+      "hntCirculatingSupply": "203655457.86286831",
+      "hntDecimals": 8,
+      "dcMintAddress": "dcuc8Amr83Wz27ZkQ2K9NS6r8zRpf1J6cvArEBDZDmm",
+      "outstandingDataCredits": "152467432007",
+      "dcDecimals": 0,
+      "outstandingDcUsdValue": 1524674.32,
+      "pegRule": "1 DC = $0.00001 USD (100,000 DC = $1.00 USD)",
+      "hntEquivalentAtRefPrice": {
+        "referenceHntPriceUsd": 5.5,
+        "hntRequiredToMintCurrentDcSupply": "277213.51274000"
+      },
+      "sanityCheck": {
+        "whereDidTokensGo": "SPL Token Burn (HNT permanently burned to mint non-transferable DC)",
+        "supplyActuallyChanged": true
+      },
+      "rpcUrl": "https://api.mainnet-beta.solana.com",
+      "verifiedAtIso": "2026-11-22T03:01:52.201Z"
+    },
+    "erc20Comparison": {
+      "shibDeadSink": {
+        "chain": "Ethereum Mainnet",
+        "tokenAddress": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+        "symbol": "SHIB",
+        "name": "SHIBA INU",
+        "decimals": 18,
+        "blockRange": {
+          "fromBlock": 26466822,
+          "toBlock": 26467821,
+          "blocksScanned": 1000
+        },
+        "onChainSupplyState": {
+          "totalSupplyRaw": "999982324697637121658742793589330",
+          "totalSupplyFormatted": "999982324697637.12165874279358933",
+          "deadAddressBalanceFormatted": "49551531517.609474879654969095",
+          "extraBurnSinksBalanceFormatted": "410437226981589.687278185493556545",
+          "combinedBurnSinksBalanceFormatted": "410486778513107.29675306514852564",
+          "zeroAddressBalanceFormatted": "0.0",
+          "deadSinkPercentOfTotalSupply": 0.004955,
+          "combinedBurnSinksPercentOfTotalSupply": 41.0494
+        },
+        "windowActivity": {
+          "transfersToDeadCount": 0,
+          "burnedToDeadFormatted": "0.0",
+          "transfersToZeroCount": 0,
+          "burnedToZeroFormatted": "0.0",
+          "mintsFromZeroCount": 0,
+          "mintedFromZeroFormatted": "0.0",
+          "netProtocolSupplyDeltaFormatted": "0.0"
+        },
+        "classification": "IRRECOVERABLE_DEAD_SINK_ONLY",
+        "washBurnWarning": false,
+        "sanityCheck": {
+          "q1_whereDidTokensGo": "0x0000...dEaD / burn sinks (irrecoverable addresses; totalSupply unchanged)",
+          "q2_totalSupplyActuallyDecreased": false,
+          "q2_circulatingReducedViaDeadSink": true
+        },
+        "rpcUrl": "https://ethereum-rpc.publicnode.com",
+        "verifiedAtIso": "2026-11-22T03:01:53.221Z"
+      },
+      "usdcProtocolBurn": {
+        "chain": "Ethereum Mainnet",
+        "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "symbol": "USDC",
+        "name": "USD Coin",
+        "decimals": 6,
+        "blockRange": {
+          "fromBlock": 26467622,
+          "toBlock": 26467821,
+          "blocksScanned": 200
+        },
+        "onChainSupplyState": {
+          "totalSupplyRaw": "44294216382974675",
+          "totalSupplyFormatted": "44294216382.974675",
+          "deadAddressBalanceFormatted": "57575.181148",
+          "extraBurnSinksBalanceFormatted": "0.0",
+          "combinedBurnSinksBalanceFormatted": "57575.181148",
+          "zeroAddressBalanceFormatted": "0.0",
+          "deadSinkPercentOfTotalSupply": 0.000129,
+          "combinedBurnSinksPercentOfTotalSupply": 0.0001
+        },
+        "windowActivity": {
+          "transfersToDeadCount": 0,
+          "burnedToDeadFormatted": "0.0",
+          "transfersToZeroCount": 40,
+          "burnedToZeroFormatted": "57715776.349606",
+          "mintsFromZeroCount": 70,
+          "mintedFromZeroFormatted": "5834329.081404",
+          "netProtocolSupplyDeltaFormatted": "-51881447.268202"
+        },
+        "classification": "PROTOCOL_TOTAL_SUPPLY_REDUCTION",
+        "washBurnWarning": false,
+        "sanityCheck": {
+          "q1_whereDidTokensGo": "0x0000...0000 (ERC-20 _burn decreases totalSupply)",
+          "q2_totalSupplyActuallyDecreased": true,
+          "q2_circulatingReducedViaDeadSink": true
+        },
+        "rpcUrl": "https://ethereum-rpc.publicnode.com",
+        "verifiedAtIso": "2026-11-22T03:01:52.979Z"
+      }
+    }
+  },
+  "simulations": {
+    "ethereum": {
+      "protocol": "Ethereum (EIP-1559)",
+      "blocksSimulated": 7,
+      "finalBaseFeeGwei": "20.3650",
+      "cumulativeBurnedWei": "2543982681876000000",
+      "cumulativeBurnedEth": "2.543982",
+      "cumulativeIssuedEth": "0.196000",
+      "netSupplyDeltaEth": "-2.347982",
+      "netDeflationary": true,
+      "blocks": [
+        {
+          "blockOffset": 1,
+          "utilizationPercent": 50,
+          "gasUsed": "15000000",
+          "baseFeeGwei": "15.0000",
+          "nextBaseFeeGwei": "15.0000",
+          "burnedWei": "225000000000000000",
+          "burnedEth": "0.225000",
+          "netSupplyDeltaWei": "-197000000000000000",
+          "deflationary": true
+        },
+        {
+          "blockOffset": 2,
+          "utilizationPercent": 85,
+          "gasUsed": "25500000",
+          "baseFeeGwei": "15.0000",
+          "nextBaseFeeGwei": "16.3125",
+          "burnedWei": "382500000000000000",
+          "burnedEth": "0.382500",
+          "netSupplyDeltaWei": "-354500000000000000",
+          "deflationary": true
+        },
+        {
+          "blockOffset": 3,
+          "utilizationPercent": 95,
+          "gasUsed": "28500000",
+          "baseFeeGwei": "16.3125",
+          "nextBaseFeeGwei": "18.1476",
+          "burnedWei": "464906250000000000",
+          "burnedEth": "0.464906",
+          "netSupplyDeltaWei": "-436906250000000000",
+          "deflationary": true
+        },
+        {
+          "blockOffset": 4,
+          "utilizationPercent": 100,
+          "gasUsed": "30000000",
+          "baseFeeGwei": "18.1476",
+          "nextBaseFeeGwei": "20.4161",
+          "burnedWei": "544429687500000000",
+          "burnedEth": "0.544429",
+          "netSupplyDeltaWei": "-516429687500000000",
+          "deflationary": true
+        },
+        {
+          "blockOffset": 5,
+          "utilizationPercent": 70,
+          "gasUsed": "21000000",
+          "baseFeeGwei": "20.4161",
+          "nextBaseFeeGwei": "21.4369",
+          "burnedWei": "428738378901000000",
+          "burnedEth": "0.428738",
+          "netSupplyDeltaWei": "-400738378901000000",
+          "deflationary": true
+        },
+        {
+          "blockOffset": 6,
+          "utilizationPercent": 30,
+          "gasUsed": "9000000",
+          "baseFeeGwei": "21.4369",
+          "nextBaseFeeGwei": "20.3650",
+          "burnedWei": "192932270505000000",
+          "burnedEth": "0.192932",
+          "netSupplyDeltaWei": "-164932270505000000",
+          "deflationary": true
+        },
+        {
+          "blockOffset": 7,
+          "utilizationPercent": 50,
+          "gasUsed": "15000000",
+          "baseFeeGwei": "20.3650",
+          "nextBaseFeeGwei": "20.3650",
+          "burnedWei": "305476094970000000",
+          "burnedEth": "0.305476",
+          "netSupplyDeltaWei": "-277476094970000000",
+          "deflationary": true
+        }
+      ]
+    },
+    "avalanche": {
+      "protocol": "Avalanche (AVAX C-Chain)",
+      "dailyTxCount": 450000,
+      "avgGasPerTx": "85000",
+      "avaxPriceUsd": 28,
+      "scenarios": [
+        {
+          "gasPriceNAvax": 25,
+          "avgTxFeeAvax": 0.002125,
+          "avgTxFeeUsd": 0.0595,
+          "dailyBurnAvax": "956.2500",
+          "annualizedBurnAvax": "349031.25",
+          "validatorFeeSharePercent": 0,
+          "uxStatus": "LOW_FEE_MODEST_BURN"
+        },
+        {
+          "gasPriceNAvax": 50,
+          "avgTxFeeAvax": 0.00425,
+          "avgTxFeeUsd": 0.119,
+          "dailyBurnAvax": "1912.5000",
+          "annualizedBurnAvax": "698062.50",
+          "validatorFeeSharePercent": 0,
+          "uxStatus": "BALANCED"
+        },
+        {
+          "gasPriceNAvax": 150,
+          "avgTxFeeAvax": 0.01275,
+          "avgTxFeeUsd": 0.357,
+          "dailyBurnAvax": "5737.5000",
+          "annualizedBurnAvax": "2094187.50",
+          "validatorFeeSharePercent": 0,
+          "uxStatus": "BALANCED"
+        },
+        {
+          "gasPriceNAvax": 500,
+          "avgTxFeeAvax": 0.0425,
+          "avgTxFeeUsd": 1.19,
+          "dailyBurnAvax": "19125.0000",
+          "annualizedBurnAvax": "6980625.00",
+          "validatorFeeSharePercent": 0,
+          "uxStatus": "HIGH_BURN_USER_FRICTION"
+        }
+      ]
+    },
+    "xrpl": {
+      "protocol": "XRP Ledger (XRPL)",
+      "baseFeeDrops": "10",
+      "expectedLedgerTxCount": 50,
+      "levels": [
+        {
+          "txCountInLedger": 25,
+          "loadRatio": 0.5,
+          "openLedgerFeeDrops": "10",
+          "openLedgerFeeXrp": "0.000010",
+          "ledgerBurnXrp": "0.000250",
+          "spamAttack10kTxCostXrp": "0.1000",
+          "status": "NORMAL_BASE_FEE"
+        },
+        {
+          "txCountInLedger": 50,
+          "loadRatio": 1,
+          "openLedgerFeeDrops": "10",
+          "openLedgerFeeXrp": "0.000010",
+          "ledgerBurnXrp": "0.000500",
+          "spamAttack10kTxCostXrp": "0.1000",
+          "status": "NORMAL_BASE_FEE"
+        },
+        {
+          "txCountInLedger": 100,
+          "loadRatio": 2,
+          "openLedgerFeeDrops": "40",
+          "openLedgerFeeXrp": "0.000040",
+          "ledgerBurnXrp": "0.004000",
+          "spamAttack10kTxCostXrp": "0.4000",
+          "status": "ESCALATED_ANTI_SPAM"
+        },
+        {
+          "txCountInLedger": 250,
+          "loadRatio": 5,
+          "openLedgerFeeDrops": "250",
+          "openLedgerFeeXrp": "0.000250",
+          "ledgerBurnXrp": "0.062500",
+          "spamAttack10kTxCostXrp": "2.5000",
+          "status": "ESCALATED_ANTI_SPAM"
+        },
+        {
+          "txCountInLedger": 500,
+          "loadRatio": 10,
+          "openLedgerFeeDrops": "1000",
+          "openLedgerFeeXrp": "0.001000",
+          "ledgerBurnXrp": "0.500000",
+          "spamAttack10kTxCostXrp": "10.0000",
+          "status": "ESCALATED_ANTI_SPAM"
+        },
+        {
+          "txCountInLedger": 1000,
+          "loadRatio": 20,
+          "openLedgerFeeDrops": "4000",
+          "openLedgerFeeXrp": "0.004000",
+          "ledgerBurnXrp": "4.000000",
+          "spamAttack10kTxCostXrp": "40.0000",
+          "status": "ESCALATED_ANTI_SPAM"
+        }
+      ]
+    },
+    "bnb": {
+      "protocol": "BNB Chain (Auto-Burn + BEP-95)",
+      "startSupplyBnb": 142000000,
+      "endSupplyBnb": 129321786.7457,
+      "cumulativeAutoBurnBnb": 12678213.2537,
+      "supplyFloorBnb": 100000000,
+      "schedule": [
+        {
+          "quarter": "Q+1",
+          "avgPriceUsd": 550,
+          "burnedBnb": "1672258.0645",
+          "remainingSupplyBnb": "140327741.9354",
+          "estimatedUsdValue": 919741935.48,
+          "floorReached": false
+        },
+        {
+          "quarter": "Q+2",
+          "avgPriceUsd": 600,
+          "burnedBnb": "1620000.0000",
+          "remainingSupplyBnb": "138707741.9354",
+          "estimatedUsdValue": 972000000,
+          "floorReached": false
+        },
+        {
+          "quarter": "Q+3",
+          "avgPriceUsd": 620,
+          "burnedBnb": "1600000.0000",
+          "remainingSupplyBnb": "137107741.9354",
+          "estimatedUsdValue": 992000000,
+          "floorReached": false
+        },
+        {
+          "quarter": "Q+4",
+          "avgPriceUsd": 580,
+          "burnedBnb": "1640506.3291",
+          "remainingSupplyBnb": "135467235.6062",
+          "estimatedUsdValue": 951493670.89,
+          "floorReached": false
+        },
+        {
+          "quarter": "Q+5",
+          "avgPriceUsd": 650,
+          "burnedBnb": "1570909.0909",
+          "remainingSupplyBnb": "133896326.5152",
+          "estimatedUsdValue": 1021090909.09,
+          "floorReached": false
+        },
+        {
+          "quarter": "Q+6",
+          "avgPriceUsd": 700,
+          "burnedBnb": "1524705.8823",
+          "remainingSupplyBnb": "132371620.6328",
+          "estimatedUsdValue": 1067294117.65,
+          "floorReached": false
+        },
+        {
+          "quarter": "Q+7",
+          "avgPriceUsd": 720,
+          "burnedBnb": "1506976.7441",
+          "remainingSupplyBnb": "130864643.8886",
+          "estimatedUsdValue": 1085023255.81,
+          "floorReached": false
+        },
+        {
+          "quarter": "Q+8",
+          "avgPriceUsd": 680,
+          "burnedBnb": "1542857.1428",
+          "remainingSupplyBnb": "129321786.7457",
+          "estimatedUsdValue": 1049142857.14,
+          "floorReached": false
+        }
+      ]
+    },
+    "helium": {
+      "protocol": "Helium (Burn-to-Mint Data Credits)",
+      "hntOraclePriceUsd": 5.5,
+      "dailyDcBreakdown": {
+        "loraPacketsDc": "150000000",
+        "mobileOffloadDc": "1250000000",
+        "hotspotOnboardsDc": "480000000",
+        "totalDailyDc": "1880000000",
+        "totalDailyUsdSpent": 18800
+      },
+      "dailyHntBurned": 3418.1818,
+      "dailyHntEmission": 20548,
+      "netDailyHntDelta": 17129.8182,
+      "burnToEmissionRatio": 0.1664,
+      "regime": "UNDERUTILIZED_EMISSION_DOMINATED"
+    }
+  },
+  "credibilityAudits": [
+    {
+      "id": "eth-eip1559",
+      "name": "Ethereum EIP-1559 Fee Burn",
+      "chain": "Ethereum Mainnet",
+      "mechanismSummary": "Every block destroys baseFeePerGas * gasUsed at protocol level; priority tips go to validators.",
+      "payerSource": "Blockspace users (base gas fee)",
+      "verificationMethod": "RPC eth_getBlockByNumber + eth_getTransactionReceipt (gasUsed * baseFeePerGas)",
+      "traitScore": 5,
+      "maxTraits": 5,
+      "passesTraitThreshold": true,
+      "traits": {
+        "ruleBased": true,
+        "auditable": true,
+        "usageLinked": true,
+        "clearTradeoff": true,
+        "noApplauseRequired": true
+      },
+      "sanityCheck": {
+        "q1_destination": "PROTOCOL_DESTRUCTION",
+        "q2_supplyImpact": "TOTAL_SUPPLY_REDUCED",
+        "onChainProofVerified": true
+      },
+      "compositeScore": 100,
+      "verdict": "CREDIBLE_INFRASTRUCTURE",
+      "redFlags": []
+    },
+    {
+      "id": "avax-cchain-fee",
+      "name": "Avalanche C-Chain Fee Burn",
+      "chain": "Avalanche C-Chain",
+      "mechanismSummary": "100% of AVAX transaction fees are permanently destroyed; zero fee payouts to validators or treasury.",
+      "payerSource": "Network transaction senders (100% of tx fees)",
+      "verificationMethod": "C-Chain RPC block/receipt gasUsed * effectiveGasPrice + blackhole fee verification",
+      "traitScore": 5,
+      "maxTraits": 5,
+      "passesTraitThreshold": true,
+      "traits": {
+        "ruleBased": true,
+        "auditable": true,
+        "usageLinked": true,
+        "clearTradeoff": true,
+        "noApplauseRequired": true
+      },
+      "sanityCheck": {
+        "q1_destination": "PROTOCOL_DESTRUCTION",
+        "q2_supplyImpact": "TOTAL_SUPPLY_REDUCED",
+        "onChainProofVerified": true
+      },
+      "compositeScore": 100,
+      "verdict": "CREDIBLE_INFRASTRUCTURE",
+      "redFlags": []
+    },
+    {
+      "id": "xrpl-tx-cost",
+      "name": "XRP Ledger Anti-Spam Destruction",
+      "chain": "XRP Ledger Mainnet",
+      "mechanismSummary": "Every validated tx destroys its XRP fee (in drops) to deter spam; reflected directly in ledger total_coins.",
+      "payerSource": "Transaction senders paying anti-spam network cost",
+      "verificationMethod": "XRPL RPC ledger(validated) -> 100B XRP - total_coins + sum(tx.Fee)",
+      "traitScore": 5,
+      "maxTraits": 5,
+      "passesTraitThreshold": true,
+      "traits": {
+        "ruleBased": true,
+        "auditable": true,
+        "usageLinked": true,
+        "clearTradeoff": true,
+        "noApplauseRequired": true
+      },
+      "sanityCheck": {
+        "q1_destination": "PROTOCOL_DESTRUCTION",
+        "q2_supplyImpact": "TOTAL_SUPPLY_REDUCED",
+        "onChainProofVerified": true
+      },
+      "compositeScore": 100,
+      "verdict": "CREDIBLE_INFRASTRUCTURE",
+      "redFlags": []
+    },
+    {
+      "id": "bnb-autoburn-bep95",
+      "name": "BNB Chain Auto-Burn + BEP-95",
+      "chain": "BNB Smart Chain",
+      "mechanismSummary": "Quarterly formula B = N * 1000 / (P + K) toward 100M floor + continuous BEP-95 gas fee burn to 0x...dEaD.",
+      "payerSource": "Protocol scheduled supply reduction + BSC gas fee share",
+      "verificationMethod": "BSC RPC balanceOf(0x...dEaD) + public quarterly burn tx + Auto-Burn formula check",
+      "traitScore": 4,
+      "maxTraits": 5,
+      "passesTraitThreshold": true,
+      "traits": {
+        "ruleBased": true,
+        "auditable": true,
+        "usageLinked": true,
+        "clearTradeoff": true,
+        "noApplauseRequired": false
+      },
+      "sanityCheck": {
+        "q1_destination": "IRRECOVERABLE_SINK_DEAD",
+        "q2_supplyImpact": "TOTAL_SUPPLY_REDUCED",
+        "onChainProofVerified": true
+      },
+      "compositeScore": 84,
+      "verdict": "CREDIBLE_INFRASTRUCTURE",
+      "redFlags": []
+    },
+    {
+      "id": "helium-bme-dc",
+      "name": "Helium Burn-to-Mint Data Credits",
+      "chain": "Solana / Helium Network",
+      "mechanismSummary": "HNT is permanently burned at oracle USD price to mint non-transferable Data Credits ($0.00001/DC) for network usage.",
+      "payerSource": "Real IoT/Mobile network consumers purchasing prepaid utility credits",
+      "verificationMethod": "Solana RPC getTokenSupply on HNT & DC SPL mints + burn-to-mint oracle accounting",
+      "traitScore": 5,
+      "maxTraits": 5,
+      "passesTraitThreshold": true,
+      "traits": {
+        "ruleBased": true,
+        "auditable": true,
+        "usageLinked": true,
+        "clearTradeoff": true,
+        "noApplauseRequired": true
+      },
+      "sanityCheck": {
+        "q1_destination": "PROTOCOL_DESTRUCTION",
+        "q2_supplyImpact": "TOTAL_SUPPLY_REDUCED",
+        "onChainProofVerified": true
+      },
+      "compositeScore": 100,
+      "verdict": "CREDIBLE_INFRASTRUCTURE",
+      "redFlags": []
+    },
+    {
+      "id": "theater-treasury-relabel",
+      "name": "[ANTI-PATTERN] Countdown Treasury Relabel",
+      "chain": "Generic EVM",
+      "mechanismSummary": "Team announces '50% Supply Burn!' with countdown timer, but moves uncirculated treasury tokens to a multisig time-lock.",
+      "payerSource": "Nobody (rearrangement of uncirculated team allocation)",
+      "verificationMethod": "Screenshot tweet only; totalSupply() unchanged",
+      "traitScore": 0,
+      "maxTraits": 5,
+      "passesTraitThreshold": false,
+      "traits": {
+        "ruleBased": false,
+        "auditable": false,
+        "usageLinked": false,
+        "clearTradeoff": false,
+        "noApplauseRequired": false
+      },
+      "sanityCheck": {
+        "q1_destination": "TREASURY_OR_LOCK_CONTROLLED",
+        "q2_supplyImpact": "RELABELED_NO_REDUCTION",
+        "onChainProofVerified": false
+      },
+      "compositeScore": 0,
+      "verdict": "THEATER_ALERT",
+      "redFlags": [
+        "Failed 3-of-5 credibility trait threshold (0/5).",
+        "Destination \"TREASURY_OR_LOCK_CONTROLLED\" is not provably irrecoverable.",
+        "Supply sanity check failed: \"RELABELED_NO_REDUCTION\" does not prove net burn.",
+        "Missing independent on-chain verification (relies on blog/tweet claims).",
+        "Unclear economic tradeoff ('nobody is paying' -> likely supply rearrangement)."
+      ]
+    },
+    {
+      "id": "theater-mint-and-burn",
+      "name": "[ANTI-PATTERN] Dev Mint-and-Burn Wash",
+      "chain": "Generic EVM",
+      "mechanismSummary": "Owner calls mint() for 10M tokens and transfers 5M to 0x...dEaD to generate a 'massive burn' tx hash while net supply grows +5M.",
+      "payerSource": "Diluted token holders (net inflation disguised as burn)",
+      "verificationMethod": "Transfer->dEaD log exists, but totalSupply() increased net +5M",
+      "traitScore": 1,
+      "maxTraits": 5,
+      "passesTraitThreshold": false,
+      "traits": {
+        "ruleBased": false,
+        "auditable": true,
+        "usageLinked": false,
+        "clearTradeoff": false,
+        "noApplauseRequired": false
+      },
+      "sanityCheck": {
+        "q1_destination": "IRRECOVERABLE_SINK_DEAD",
+        "q2_supplyImpact": "NET_INFLATIONARY_WASH_BURN",
+        "onChainProofVerified": true
+      },
+      "compositeScore": 33,
+      "verdict": "THEATER_ALERT",
+      "redFlags": [
+        "Failed 3-of-5 credibility trait threshold (1/5).",
+        "Supply sanity check failed: \"NET_INFLATIONARY_WASH_BURN\" does not prove net burn.",
+        "Unclear economic tradeoff ('nobody is paying' -> likely supply rearrangement)."
+      ]
+    },
+    {
+      "id": "theater-vibe-burn",
+      "name": "[ANTI-PATTERN] Discretionary Hype Burn",
+      "chain": "Generic EVM",
+      "mechanismSummary": "One-off manual burn of 0.1% supply announced whenever token price dips, with no usage link or repeatable rule.",
+      "payerSource": "Ad-hoc marketing budget",
+      "verificationMethod": "Single manual tx to 0x...dEaD; no recurring protocol rule",
+      "traitScore": 1,
+      "maxTraits": 5,
+      "passesTraitThreshold": false,
+      "traits": {
+        "ruleBased": false,
+        "auditable": true,
+        "usageLinked": false,
+        "clearTradeoff": false,
+        "noApplauseRequired": false
+      },
+      "sanityCheck": {
+        "q1_destination": "IRRECOVERABLE_SINK_DEAD",
+        "q2_supplyImpact": "CIRCULATING_SINK_ONLY",
+        "onChainProofVerified": true
+      },
+      "compositeScore": 43,
+      "verdict": "THEATER_ALERT",
+      "redFlags": [
+        "Failed 3-of-5 credibility trait threshold (1/5).",
+        "Unclear economic tradeoff ('nobody is paying' -> likely supply rearrangement)."
+      ]
+    }
+  ],
+  "contractsSummary": {
+    "compilerVersion": "0.8.39+commit.ce47f2c8.Emscripten.clang",
+    "contractCount": 4,
+    "errorCount": 0,
+    "contracts": [
+      {
+        "file": "BurnToMintDataCredits.sol",
+        "contractName": "BurnToMintDataCredits",
+        "bytecodeBytes": 1676,
+        "deployedBytecodeBytes": 1509,
+        "bytecodeSha256": "47e45a6879708c394c1eb55c15d61334b99872e39770226fc143bf0a08377610",
+        "functions": [
+          "burnForCredits(uint256)",
+          "dataCreditsOf(address)",
+          "oracleAdmin()",
+          "oraclePriceMicroUsd()",
+          "spendCredits(uint256,bytes32)",
+          "tokenBalanceOf(address)",
+          "tokenDecimals()",
+          "tokenSymbol()",
+          "totalDcMinted()",
+          "totalDcSpent()",
+          "totalTokenBurned()",
+          "totalTokenSupply()",
+          "transferDataCredits(address,uint256)",
+          "updateOraclePrice(uint256)"
+        ],
+        "events": [
+          "DataCreditsSpent(address,uint256,bytes32)",
+          "OraclePriceUpdated(uint256,uint256)",
+          "TokenBurnedForCredits(address,uint256,uint256,uint256,uint256)"
+        ]
+      },
+      {
+        "file": "RealFeeBurnToken.sol",
+        "contractName": "RealFeeBurnToken",
+        "bytecodeBytes": 1914,
+        "deployedBytecodeBytes": 1658,
+        "bytecodeSha256": "22b16febb581f4744ff29d6bf5b05d1c72e24c6b0bd9ca43205044c8ab4e28bb",
+        "functions": [
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "balanceOf(address)",
+          "decimals()",
+          "feeBurnBps()",
+          "name()",
+          "symbol()",
+          "totalBurned()",
+          "totalSupply()",
+          "transfer(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "events": [
+          "Approval(address,address,uint256)",
+          "FeeBurned(address,uint256,uint256)",
+          "Transfer(address,address,uint256)"
+        ]
+      },
+      {
+        "file": "ScheduledAutoBurnVault.sol",
+        "contractName": "ScheduledAutoBurnVault",
+        "bytecodeBytes": 1363,
+        "deployedBytecodeBytes": 1092,
+        "bytecodeSha256": "d750fbd5825d3fd64f6c6077f259dd22d29ed4c2c903ebe03d5b71508d51155a",
+        "functions": [
+          "QUARTER_INTERVAL()",
+          "TOKEN_DECIMALS()",
+          "USD_SCALE()",
+          "cumulativeBurned()",
+          "executeQuarterlyAutoBurn(uint256,uint256)",
+          "lastBurnTimestamp()",
+          "previewQuarterlyBurn(uint256,uint256)",
+          "priceAnchorScaled()",
+          "quarterCounter()",
+          "supplyFloor()",
+          "totalSupply()"
+        ],
+        "events": [
+          "AutoBurnExecuted(uint256,uint256,uint256,uint256,uint256)"
+        ]
+      },
+      {
+        "file": "TheaterBurnAntiPattern.sol",
+        "contractName": "TheaterBurnAntiPattern",
+        "bytecodeBytes": 1753,
+        "deployedBytecodeBytes": 1521,
+        "bytecodeSha256": "076ca4ff8b2187badd1ae8883a7b9247524dbe17d86f60c9b7a453ea1a9180bf",
+        "functions": [
+          "DEAD()",
+          "balanceOf(address)",
+          "mintAndBurnWash(uint256)",
+          "owner()",
+          "relabelTreasuryAsBurned(uint256,string)",
+          "teamControlledLock()",
+          "totalSupply()"
+        ],
+        "events": [
+          "MassiveBurnCeremony(string,uint256)",
+          "Transfer(address,address,uint256)"
+        ]
+      }
+    ]
+  },
+  "integritySha256": "2d36b420c5b7a555c34f46946286425a230b972277a7449fbce1c79be00a4230"
+}
